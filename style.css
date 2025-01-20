@@ -1,0 +1,230 @@
+/* 全局基础样式 */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: sans-serif;
+    background-color: #fff; /* 纯白背景 */
+    color: #000; /* 黑色文字 */
+}
+
+/* 章节标签 */
+header, nav, section, article, aside, footer, main {
+    margin: 1.5rem 0;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #000; /* 黑色边框 */
+    border-radius: 0;
+    box-shadow: 5px 5px 0 #000;
+}
+
+/* 标题标签 */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: #000; /* 黑色标题 */
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+/* 文本内容标签 */
+p {
+    margin-bottom: 1rem;
+}
+
+pre, code {
+    font-family: monospace;
+    background-color: #f4f4f4;
+    padding: 0.5rem;
+    overflow-x: auto;
+}
+
+blockquote {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-left: 4px solid #000;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 2rem 0;
+}
+
+/* 列表标签 */
+ul, ol, dl {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 0.5rem;
+}
+
+/* 图片和多媒体 */
+img, video, iframe, embed, object {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+/* 行内文本标签 */
+a {
+    color: #000; /* 链接颜色为黑色 */
+    text-decoration: none; /* 去除默认下划线 */
+    margin: 0 0.3rem; /* 调整为较小间距 */
+}
+
+a:hover {
+    /* 去除下划线效果 */
+    text-decoration: none; /* 鼠标悬浮时不显示下划线 */
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* 表格 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #000;
+    text-align: left;
+}
+
+caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* 表单 */
+form {
+    margin-bottom: 1.5rem;
+}
+
+input, textarea, select, button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+button {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    box-shadow: 2px 2px 0 #000;
+}
+
+/* 导航样式 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0;
+}
+
+nav a:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none; /* 去除悬停时的下划线 */
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    header, nav, section, article, aside, footer, main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    h4, h5, h6 {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    a {
+        margin: 0.3rem 0; /* 手机模式下减少链接间距 */
+    }
+
+    button {
+        padding: 0.75rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    input, textarea, select {
+        font-size: 1.2rem;
+    }
+}
